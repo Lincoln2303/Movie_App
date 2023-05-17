@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+/* I.08. We add a :root: (NOTE: For storing color variables) */
+:root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* I.07. We start with some adjustments in th */
+body {
+    background-color: var(--primary-color );
+    font-family: 'Poppins', sans-serif;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; */
+    /* NOTE: We use "overflow" on hidden, because we don't want scroll bars to be shown by default */
+    /* overflow: hidden; */
+    margin: 0;
+}
+
+/* I.08. We're styling the header: (NOTE: The search bar)*/
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: end;
+    background-color: var(--secondary-color );
+}
+
+/* I.09. Styling the .search: */
+.search {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+
+/* I.10. We can style separately the placeholder within the search: (NOTE: We have to add ::placeholder) */
+.search::placeholder {
+    color: #7378c5;
+}
+
+/* I.11. We style search on :focus: (NOTE: When we click on it) */
+.search:focus {
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+/* I.12. Styling the main area: */
+main {
+    /* NOTE: We're going to have flex items in main, and we want to wrap them to go the next line */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* I.14. Styling the movie class separately: */
+.movie {
+    /* NOTE: The width of each movie */
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+/* I.13. Styling the img in a movie class: */
+.movie img {
+    width: 100%;
+}
+
+/* I.14. Styling movie-info class: (NOTE: The title, and the raiting) */
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* I.15. Styling h3 in movie-info class: */
+.movie-info h3 {
+    margin-top: 0;
+}
+
+/* I.16. Styling span in movie-info class: (NOTE: The raiting) */
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* I.17. After we're making our different colour classes for the span: (NOTE: green, orange, red => depends on the raiting) */
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+/* I.18. The last part is styling the overview class: (NOTE: Includes h3, and a div description */
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    /* NOTE: We want to position it absolute */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    /* NOTE: Since we don't want this to show initially, we want to push out of the box, and when we hover it comes up again */
+    /* EXTRA-NOTE: We'll move it down with transform:translateY(); => +1% of the height (we can set it to 50% too) */
+    transform: translateY(101%);
+    /* NOTE: We want to add a transition on the transform */
+    transition: transform 0.3s ease-in;
+}
+
+/* I.19. When we hover on .movie (which is the entire box), we want the overview transform to set it back to 0%: */
+/* AFTER: In the next section we'll do the javascript, and pull the data with the API (section II.)  */
+/* SECTION II. NOTE: We have to start in moviedb.org => Registering => Getting API Key */
+.movie:hover .overview {
+    transform: translateY(0%);
+}
+
+
+
+
+
+
+
+
+
+
+

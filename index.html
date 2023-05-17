@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Movie App</title>
+</head>
+<body>
+    <!-- I.01. First we'll add a header, with a form: -->
+    <header>
+        <form id="form">
+            <!-- I.02. We'll just need a search here: -->
+            <input type="text" id="search" class="search" placeholder="Search">
+        </form>
+    </header>
+    <!-- I.03. Under the header we'll add the main area: -->
+    <main id="main">
+        <!-- III.08. DELETED TWO .movie <div>s, AND COMMENTED OUT THE ORIGINAL! -->
+        <!-- NOTE: The movies are gonna be inserted to the DOM with javascript -->
+        <!-- I.04. Each element will have a movie div around it, with an image inside: -->
+        <!-- <div class="movie">
+            <img src="https://images.unsplash.com/photo-1518173835740-f5d14111d76a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1570&q=80" alt=""> -->
+            <!-- I.05. We add a separate div, with the movie title: -->
+            <!-- <div class="movie-info">
+                <h3>Movie Title</h3> -->
+                <!-- NOTE: This is gonna be the rating, and the color of the rating depends on the raiting => we'll make it dynamic with the javascript (green, orange, red) -->
+                <!-- <span class="green">9.8</span>
+            </div> -->
+            <!-- I.06. After we'll have a div with overview: (NOTE: Inside an h3 with a text) -->
+            <!-- NOTE: We're going to have many of this movie divs with using API data -->
+            <!-- AFTER: We're doing our css (I.07.) -->
+            <!-- <div class="overview">
+                <h3>Overview</h3>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim reprehenderit dignissimos recusandae distinctio, accusamus quae adipisci est veniam debitis, cupiditate culpa omnis. Numquam laudantium assumenda ipsam, officia labore nam qui.
+                Vel vitae quidem deleniti iusto aut voluptatum, totam quia laudantium optio beatae.
+            </div>
+        </div> -->
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
